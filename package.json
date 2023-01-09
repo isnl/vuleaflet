@@ -1,0 +1,38 @@
+{
+  "name": "vuleaflet",
+  "private": false,
+  "version": "1.0.3",
+  "keywords": [
+    "vuleaflet"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isnl/vuleaflet"
+  },
+  "scripts": {
+    "dev": "vite --force --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/vu-leaflet.umd.js",
+  "module": "lib/vu-leaflet.es.js",
+  "exports": {
+    "./lib/style.css": "./lib/style.css",
+    ".": {
+      "import": "./lib/vu-leaflet.es.js",
+      "require": "./lib/vu-leaflet.umd.js"
+    }
+  },
+  "dependencies": {
+    "leaflet": "^1.9.3",
+    "vue": "^3.2.25",
+    "vuleaflet": "^1.0.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9"
+  }
+}
