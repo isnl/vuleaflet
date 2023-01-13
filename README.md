@@ -1,4 +1,6 @@
-> vue3 版本的 leaflet 组件, leaflet 版本基于 @1.9.3
+简介：
+
+vue3 版本的 leaflet 组件, leaflet 版本基于 @1.9.3
 
 ##### 安装
 
