@@ -1,15 +1,15 @@
 import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import { createVuePlugin } from 'vite-plugin-vue2'
 const { resolve } = require('path');
 
 export default defineConfig({
-	plugins: [vue()],
+	plugins: [createVuePlugin()],
 	build: {
 		outDir: 'lib',
 		lib: {
 			entry: resolve(__dirname, 'packages/index.js'),
-			name: 'VuLeaflet',
-			fileName: 'vu-leaflet',
+			name: 'TbComp',
+			fileName: 'tb-comp',
 		},
 		rollupOptions: {
 			// 确保外部化处理那些你不想打包进库的依赖

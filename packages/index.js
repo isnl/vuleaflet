@@ -1,14 +1,20 @@
-import VuLeaflet from './VuLeaflet';
-
+import { TbLeaflet } from './TbLeaflet';
+import * as utils from './utils';
+import * as tbMapUtils from './utils/map';
 //按需引入
-export { VuLeaflet };
+export { TbLeaflet, utils, tbMapUtils };
 
-const components = [VuLeaflet];
+const components = [TbLeaflet];
+const TbComp = {
+	install(Vue) {
+		components.map((item) => {
+			Vue.component(item.name, item);
+		});
 
-const install = (App) => {
-	components.forEach((item) => {
-		App.component(item.__name, item);
-	});
+		Vue.prototype.$tu = utils;
+
+		Vue.prototype.$tmu = tbMapUtils;
+	},
 };
 
-export default { install };
+export default TbComp;

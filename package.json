@@ -1,14 +1,14 @@
 {
-  "name": "vuleaflet",
-  "private": false,
-  "version": "1.0.4",
-  "homepage": "https://github.com/isnl/vuleaflet",
+  "name": "tb-comp",
+  "private": true,
+  "version": "1.0.0",
+  "homepage": "https://github.com/isnl/tb-comp",
   "keywords": [
-    "vuleaflet"
+    "tb-comp"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/isnl/vuleaflet"
+    "url": "https://github.com/isnl/tb-comp"
   },
   "scripts": {
     "dev": "vite --force --host",
@@ -18,19 +18,23 @@
   "files": [
     "lib"
   ],
-  "main": "lib/vu-leaflet.umd.js",
-  "module": "lib/vu-leaflet.es.js",
+  "main": "lib/tb-comp.umd.js",
+  "module": "lib/tb-comp.es.js",
   "exports": {
     "./lib/style.css": "./lib/style.css",
     ".": {
-      "import": "./lib/vu-leaflet.es.js",
-      "require": "./lib/vu-leaflet.umd.js"
+      "import": "./lib/tb-comp.es.js",
+      "require": "./lib/tb-comp.umd.js"
     }
   },
   "dependencies": {
-    "leaflet": "^1.9.3",
-    "vue": "^3.2.25",
-    "vuleaflet": "^1.0.3"
+    "@geoman-io/leaflet-geoman-free": "^2.14.2",
+    "ant-design-vue": "^1.7.8",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.1",
+    "vite-plugin-vue2": "^1.9.3",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.7.14"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
