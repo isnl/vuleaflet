@@ -1,6 +1,61 @@
 ## 组件
 
-- [x] tb-leaflet leaflet 地图组件
+### tb-leaflet leaflet 地图组件
+
+使用：
+
+```vue
+<tb-leaflet />
+```
+
+属性：
+
+`zoomConfig`: `Object`，缩放组件配置
+
+```js
+let zoomConfig = {
+	style: {
+		right: '20px',
+		bottom: '20px',
+	},
+};
+```
+
+方法：
+
+`onReady`：地图创建完成的回调，参数为地图实例
+
+```vue
+<tb-leaflet @onReady="onReady" />
+
+<script>
+export default {
+	methods: {
+		onReady(map) {
+			console.log('map', map);
+		},
+	},
+};
+</script>
+```
+
+`onZoom`： 地图缩放的回调，参数为缩放级别
+
+```vue
+<tb-leaflet @onZoom="onZoom" />
+
+<script>
+export default {
+	methods: {
+		onZoom(zoom) {
+			console.log('zoom', zoom);
+		},
+	},
+};
+</script>
+```
+
+#### 缩放组件
 
 - [ ] tb-map-clip 卷帘组件
 
@@ -13,8 +68,6 @@ tb-map-timeline 时间轴组件
 tb-map- 自由统计组件
 
 tb-map-control 底图切换组件
-
-tb-map-zoom 缩放组件
 
 tb-map-legend 图例组件
 

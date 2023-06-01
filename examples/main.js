@@ -5,7 +5,7 @@ import 'ant-design-vue/dist/antd.css';
 import App from './App.vue';
 Vue.use(Antd);
 
-import TbComp, { utils } from '../lib/tb-comp.es';
+import TbComp, { utils } from '../packages/index'
 import '../lib/style.css';
 Vue.use(TbComp);
 

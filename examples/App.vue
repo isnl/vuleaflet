@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		<tb-leaflet @onReady="onMapReady" />
+		<tb-leaflet :zoomConfig="zoomConfig" @onReady="onMapReady" />
 		<a-button type="primary" class="btnFirstLine f-marker" style="left: 20px" @click="onDraw(DRAW_TYPE.Marker)">标点</a-button>
 		<a-button type="primary" class="btnFirstLine f-line" style="left: 100px" @click="onDraw(DRAW_TYPE.Line)">标线</a-button>
 		<a-button type="primary" class="btnFirstLine f-polygon" style="left: 180px" @click="onDraw(DRAW_TYPE.Polygon)">标面</a-button>
@@ -8,10 +8,6 @@
 		<a-button type="primary" class="btnFirstLine f-polygon" style="left: 360px" @click="onDraw(DRAW_TYPE.Circle)">圆</a-button>
 		<a-button type="primary" class="btnFirstLine f-polygon" style="left: 420px" @click="onDraw(DRAW_TYPE.Rectangle)">矩形</a-button>
 		<a-button type="primary" class="btnFirstLine f-polygon" style="left: 500px" @click="onDraw(DRAW_TYPE.Text)">文本</a-button>
-		<!-- CircleMarker
-Circle
-Rectangle
-Text -->
 		<a-button type="danger" class="btnFirstLine f-disable" style="left: 580px" @click="onDrawDisable">停止</a-button>
 		<a-button type="danger" class="btnFirstLine f-clear" style="left: 660px" @click="onDrawClear">清除</a-button>
 
@@ -31,6 +27,12 @@ export default {
 		return {
 			map: null,
 			DRAW_TYPE,
+			zoomConfig: {
+				style: {
+					right: '20px',
+					bottom: '20px',
+				},
+			},
 		};
 	},
 	methods: {
